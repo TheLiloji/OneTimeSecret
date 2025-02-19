@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Voir le Secret - Terensys{% endblock %}
+
+{% block content %}
+<h2>Voici le message secret</h2>
+<div class="secret-link">
+    {{ secret }}
+</div>
+<p><strong>Note :</strong> Ce message a été supprimé de nos serveurs et ne peut plus être consulté.</p>
+<a href="{{ url_for('index') }}" class="btn">Créer un nouveau secret</a>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Secret Créé - Terensys{% endblock %}
+
+{% block content %}
+<h2>Secret créé avec succès</h2>
+<p>Partagez ce lien avec la personne de votre choix. Le secret ne pourra être lu qu'une seule fois :</p>
+<div class="secret-link">
+    {{ request.host_url }}secret/{{ token }}
+</div>
+<p><strong>Attention :</strong> Ce secret sera automatiquement supprimé après 24 heures ou après sa première lecture.</p>
+<a href="{{ url_for('index') }}" class="btn">Créer un nouveau secret</a>
+{% endblock %}

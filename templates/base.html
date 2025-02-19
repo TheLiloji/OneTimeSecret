@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}OneTimeSecret - Terensys{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/symbol.png') }}">
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Terensys" class="logo-text">
+        </div>
+        <h1>Service de Partage Sécurisé</h1>
+    </div>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <div class="footer">
+        <p>&copy; {{ year }} Terensys - Sécurisé et Confidentiel</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Créer un Secret - OneTimeSecret{% endblock %}
+
+{% block content %}
+<h2>Créer un nouveau secret</h2>
+<form action="{{ url_for('create') }}" method="POST">
+    <div class="form-group">
+        <label for="secret">Votre message secret :</label>
+        <textarea name="secret" id="secret" required></textarea>
+    </div>
+    <button type="submit" class="btn">Créer le secret</button>
+</form>
+{% endblock %}

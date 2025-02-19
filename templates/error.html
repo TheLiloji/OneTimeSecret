@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Erreur - Terensys{% endblock %}
+
+{% block content %}
+<div class="error-message">
+    <h2>Erreur</h2>
+    <p>{{ message }}</p>
+</div>
+<a href="{{ url_for('index') }}" class="btn">Créer un nouveau secret</a>
+{% endblock %}
