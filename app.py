@@ -144,8 +144,9 @@ def ratelimit_handler(e):
 if __name__ == '__main__':
     # En production, on écoute sur localhost uniquement
     # Le reverse proxy s'occupera de rediriger le trafic
+    ssl_context = ('cert.pem', 'key.pem')
     app.run(
         host='127.0.0.1',
         port=5000,
-        ssl_context=None  # Pas besoin de SSL car géré par le reverse proxy
+        ssl_context=ssl_context
     )
